@@ -20,8 +20,8 @@
   .controlBtn .active {
     color: #9d7fe9; }
   .controlBtn > div {
-    width: 90px;
-    height: 90px;
+    width: 60px;
+    height: 60px;
     flex-shrink: 0;
     margin-bottom: 15px; }
     .controlBtn > div > img {
