@@ -1,0 +1,28 @@
+.controlBtn {
+  background: none;
+  color: #fff;
+  font-weight: 300;
+  font-size: 18px;
+  width: 100px;
+  border: none;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  cursor: pointer;
+  outline: none;
+  flex-shrink: 0;
+  margin-left: 10px; }
+  .controlBtn:first-of-type {
+    margin-left: 0; }
+  .controlBtn:hover,
+  .controlBtn .active {
+    color: #9d7fe9; }
+  .controlBtn > div {
+    width: 90px;
+    height: 90px;
+    flex-shrink: 0;
+    margin-bottom: 15px; }
+    .controlBtn > div > img {
+      width: 100%; }

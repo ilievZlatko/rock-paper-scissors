@@ -6,7 +6,7 @@ import './Header.css';
 const header = () => (
 	<header className="header">
 		<BurgerBtn />
-		<span style={{ fontSize: '24px' }}>ROCK, PAPER, SCISSORS</span>
+		<span style={{ fontSize: '20px' }}>ROCK, PAPER, SCISSORS</span>
 		<Logo />
 	</header>
 );
