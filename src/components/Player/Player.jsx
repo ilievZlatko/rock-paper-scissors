@@ -1,8 +1,6 @@
 import React from 'react';
 import OptionHolder from './OptionHolder/OptionHolder';
-import rock from '../../assets/images/rock.svg';
-import paper from '../../assets/images/paper.svg';
-import scissors from '../../assets/images/scissors.svg';
+import OptionImage from '../UI/OptionImage/OptionImage';
 import './Player.css';
 
 const player = props => {
@@ -12,7 +10,7 @@ const player = props => {
 			holder = (
 				<div className="player">
 					<OptionHolder score={props.score}>
-						<img src={rock} alt={props.choice.name} />
+						<OptionImage choice={props.choice.name} />
 					</OptionHolder>
 				</div>
 			);
@@ -21,7 +19,7 @@ const player = props => {
 			holder = (
 				<div className="player">
 					<OptionHolder score={props.score}>
-						<img src={paper} alt={props.choice.name} />
+						<OptionImage choice={props.choice.name} />
 					</OptionHolder>
 				</div>
 			);
@@ -30,7 +28,7 @@ const player = props => {
 			holder = (
 				<div className="player">
 					<OptionHolder score={props.score}>
-						<img src={scissors} alt={props.choice.name} />
+						<OptionImage choice={props.choice.name} />
 					</OptionHolder>
 				</div>
 			);

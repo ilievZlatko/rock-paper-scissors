@@ -3,9 +3,7 @@ import Header from './components/Header/Header';
 import Scene from './components/Scene/Scene';
 import Footer from './components/Footer/Footer';
 import ControlBtn from './components/UI/ControlBtn/ControlBtn';
-import Rock from './assets/images/rock.svg';
-import Paper from './assets/images/paper.svg';
-import Scissors from './assets/images/scissors.svg';
+import OptionImage from './components/UI/OptionImage/OptionImage';
 
 class App extends Component {
 	state = {
@@ -57,30 +55,24 @@ class App extends Component {
 	render() {
 		const content = this.state.startNewGame ? (
 			<div>
-				<ControlBtn
-					clicked={() => this.switchPlayerChoiceHandler(this.state.options[0])}
-				>
-					<div>
-						<img src={Rock} style={{ height: '100%' }} alt="Rock" />
-					</div>
-					ROCK
-				</ControlBtn>
-				<ControlBtn
-					clicked={() => this.switchPlayerChoiceHandler(this.state.options[1])}
-				>
-					<div>
-						<img src={Paper} style={{ height: '100%' }} alt="Paper" />
-					</div>
-					PAPER
-				</ControlBtn>
-				<ControlBtn
-					clicked={() => this.switchPlayerChoiceHandler(this.state.options[2])}
-				>
-					<div>
-						<img src={Scissors} style={{ height: '100%' }} alt="Scissors" />
-					</div>
-					SCISSORS
-				</ControlBtn>
+				{this.state.options.map((option, i) => {
+					return (
+						<ControlBtn
+							key={`button-${i}`}
+							clicked={() =>
+								this.switchPlayerChoiceHandler(this.state.options[i])
+							}
+						>
+							<div>
+								<OptionImage
+									style={{ height: '100%' }}
+									choice={this.state.options[i].name}
+								/>
+							</div>
+							{this.state.options[i].name.toUpperCase()}
+						</ControlBtn>
+					);
+				})}
 			</div>
 		) : (
 			<button className="new-game-btn" onClick={this.startNewGame}>
