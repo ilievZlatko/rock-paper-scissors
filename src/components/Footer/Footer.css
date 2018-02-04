@@ -18,3 +18,7 @@ footer {
     justify-content: space-around;
     background: #6a569b;
     color: #fff; }
+
+@media (max-width: 499px) {
+  footer {
+    position: relative; } }
