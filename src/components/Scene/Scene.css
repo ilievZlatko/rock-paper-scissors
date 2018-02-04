@@ -1,5 +1,12 @@
-.Scene {
+.scene {
   background: #f6f6f6;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; }
+  justify-content: center;
+  align-items: center; }
+  .scene .player {
+    color: teal; }
+  .scene .computer {
+    color: #ca4730; }
+  .scene .vs {
+    color: #b1b1b1; }

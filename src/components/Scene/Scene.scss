@@ -1,6 +1,19 @@
-.Scene {
+.scene {
 	background: #f6f6f6;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: center;
+	align-items: center;
+
+	.player {
+		color: teal;
+	}
+
+	.computer {
+		color: rgb(202, 71, 48);
+	}
+
+	.vs {
+		color: #b1b1b1;
+	}
 }

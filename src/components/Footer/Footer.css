@@ -11,3 +11,10 @@ footer {
   color: #fff;
   padding: 5px 20px;
   box-sizing: border-box; }
+  footer > div {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    background: #6a569b;
+    color: #fff; }
