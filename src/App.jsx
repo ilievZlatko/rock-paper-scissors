@@ -35,7 +35,6 @@ class App extends Component {
 
 	compareScores() {
 		if (this.state.playerChoice.wins === this.state.computerChoice.name) {
-			console.log(this.state.playerChoice, this.state.computerChoice);
 			const currentScore = this.state.playerScore + 1;
 			this.setState({ playerScore: currentScore });
 		} else if (
