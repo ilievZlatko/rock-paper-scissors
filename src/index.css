@@ -10,6 +10,11 @@ html {
 	height: calc(100% - 130px);
 }
 
+#root,
+.App {
+	height: 100%;
+}
+
 .new-game-btn {
 	background: #fff;
 	border: none;
