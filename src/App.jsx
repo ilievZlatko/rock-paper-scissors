@@ -19,12 +19,10 @@ class App extends Component {
 		startNewGame: true
 	};
 
-	switchPlayerChoiceHandler = option => {
+	switchPlayerChoiceHandler = player => {
 		const computer = this.generateComputerChoice();
-		this.setState({ playerChoice: option, computerChoice: computer });
-		setTimeout(() => {
-			this.compareScores();
-		}, 100);
+		this.setState({ playerChoice: player, computerChoice: computer });
+		this.compareScores(player, computer);
 	};
 
 	generateComputerChoice() {
@@ -33,13 +31,11 @@ class App extends Component {
 		];
 	}
 
-	compareScores() {
-		if (this.state.playerChoice.wins === this.state.computerChoice.name) {
+	compareScores(player, computer) {
+		if (player.wins === computer.name) {
 			const currentScore = this.state.playerScore + 1;
 			this.setState({ playerScore: currentScore });
-		} else if (
-			this.state.computerChoice.wins === this.state.playerChoice.name
-		) {
+		} else if (computer.wins === player.name) {
 			const currenComputerScore = this.state.computerScore + 1;
 			this.setState({ computerScore: currenComputerScore });
 		}
